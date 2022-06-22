@@ -31,13 +31,54 @@ If there are two or more CSS rules that point to the same element, the selector 
 * if we combine more than one selector then we have to add specificity value of all the items then which has highest value has highest spacificity. 
 
 ## 7. CSS Responsive Queries
+The @media rule is used in media queries to apply different styles for different media types/devices.Media queries can be used to check many things, such as:
+
+* width and height of the viewport
+* width and height of the device
+* orientation (is the tablet/phone in landscape or portrait mode?)
+* resolution
+
+Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.
+CSS Syntax:
+```
+@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+  CSS-Code;
+}
+```
+```
+meaning of the not, only and and keywords:
+
+not: The not keyword inverts the meaning of an entire media query.
+
+only: The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. It has no effect on modern browsers.
+
+and: The and keyword combines a media feature with a media type or other media features.
+
+They are all optional. However, if you use not or only, you must also specify a media type.
+```
+Example 
+```
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+```
 ## 8. Flexbox/Grid
-## 8. Common header meta tags
+## 9. Common header meta tags
 The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
 
 <meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.Metadata will not be displayed on the page, but is machine parsable. Some important attributes of the metatag is given bellow:
   
-  ### 8.1 meta tag
+  ### 9.1 meta tag
    It gives the information about the meta data. Here is the example of meta tag
   ```
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +86,7 @@ The <meta> tag defines metadata about an HTML document. Metadata is data (inform
  The viewport is the user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen.The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
 
 The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
-  ### 8.2 title tag
+  ### 9.2 title tag
   The <title> element defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.
   The <title> element:
 
@@ -57,7 +98,7 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
   <title>My first project</title>
   ```
   This will give the 
-  ### 8.3 Open Graph Data 
+  ### 9.3 Open Graph Data 
   It is a metadata protocol that Facebook invented to provide richer metadata for websites. 
   ```
   <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
@@ -66,12 +107,12 @@ information about Open Web technologies including HTML, CSS, and APIs for both W
 and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 <meta property="og:title" content="Mozilla Developer Network">
   ```
-  ### 8.4  Twitter Cards
+  ### 9.4  Twitter Cards
   Twitter also has its own similar proprietary metadata called Twitter Cards, which has a similar effect when the site's URL is displayed on twitter.com.
   ```
   <meta name="twitter:title" content="Mozilla Developer Network">
   ```
-  ### 8.4 Different Styling tags 
+  ### 9.5 Different Styling tags 
   In HTML we use diffrent type of styling tags to style html such as link tag to link css and favicon and script tag to link  java script.
   ```
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -82,7 +123,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
 
 
-## 9. Conclusion
+## 10. Conclusion
   The CSS is an important part of every website that is developed or devolopment is going on. Thus, a web page you see in a browser is a combination of the document’s data sources, with the CSS formatting rules applied. In the other tutorials in this section you will learn more about CSS, why it is important, and how to use it effectively.
 ## 10. References
 1. https://www.w3schools.com/css/default.asp
