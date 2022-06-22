@@ -33,12 +33,57 @@ If there are two or more CSS rules that point to the same element, the selector 
 ## 7. CSS Responsive Queries
 ## 8. Flexbox/Grid
 ## 8. Common header meta tags
-## 9. Any other topic you like.
+The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+
+<meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.Metadata will not be displayed on the page, but is machine parsable. Some important attributes of the metatag is given bellow:
+  
+  ### 8.1 meta tag
+   It gives the information about the meta data. Here is the example of meta tag
+  ```
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ```
+ The viewport is the user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen.The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+  ### 8.2 title tag
+  The <title> element defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.
+  The <title> element:
+
+*  defines a title in the browser toolbar
+*  provides a title for the page when it is added to favorites
+*  displays a title for the page in search engine-results
+  For example
+  ```
+  <title>My first project</title>
+  ```
+  This will give the 
+  ### 8.3 Open Graph Data 
+  It is a metadata protocol that Facebook invented to provide richer metadata for websites. 
+  ```
+  <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+information about Open Web technologies including HTML, CSS, and APIs for both Web sites
+and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+<meta property="og:title" content="Mozilla Developer Network">
+  ```
+  ### 8.4  Twitter Cards
+  Twitter also has its own similar proprietary metadata called Twitter Cards, which has a similar effect when the site's URL is displayed on twitter.com.
+  ```
+  <meta name="twitter:title" content="Mozilla Developer Network">
+  ```
+  ### 8.4 Different Styling tags 
+  In HTML we use diffrent type of styling tags to style html such as link tag to link css and favicon and script tag to link  java script.
+  ```
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="my-css-file.css">
+ <script src="my-js-file.js" defer></script>
+  ```
 
 
 
 
-## 10. Conclusion
-## 13. References
+## 9. Conclusion
+  The CSS is an important part of every website that is developed or devolopment is going on. Thus, a web page you see in a browser is a combination of the document’s data sources, with the CSS formatting rules applied. In the other tutorials in this section you will learn more about CSS, why it is important, and how to use it effectively.
+## 10. References
 1. https://www.w3schools.com/css/default.asp
 2. https://developer.mozilla.org/en-US/docs/Web/CSS#cookbook
