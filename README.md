@@ -73,7 +73,7 @@ Example
 }
 ```
 ## 8. Flexbox/Grid
-### Grid Layout
+### 8.2 Grid Layout
 The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.A grid layout consists of a parent element, with one or more child elements.An HTML element becomes a grid container when its display property is set to grid or inline-grid.All direct children of the grid container automatically become grid items.The horizontal lines of grid items are called rows.The gap property is a shorthand property for the row-gap and the column-gap properties.The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.
 Example:
 ```HTML
@@ -121,7 +121,50 @@ Example:
 Output will be displayed like this
 ![](https://media.geeksforgeeks.org/wp-content/uploads/gridtemplate1.png)
 
+### 8.2 Flex box
+The flexbox or flexible box model in CSS is a one-dimensional layout model that has flexible and efficient layouts with distributed spaces among items to control their alignment structure ie., it is a layout model that provides an easy and clean way to arrange items within a container. Flexbox can be useful for creating small-scales layouts & is responsive and mobile-friendly.
+##### Features of flexbox:
+* A lot of flexibility is given.
+* Arrangement & alignment of items.
+* Proper spacing
+* Order & Sequencing of items.
+Example 
+```
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Flexbox Tutorial</title>
+    <style>
+    .flex-container {
+        display: flex;
+        background-color: #32a852;
+    }
+     
+    .flex-container div {
+        background-color: #c9d1cb;
+        margin: 10px;
+        padding: 10px;
+    }
+    </style>
+</head>
+ 
+<body>
+    <h2>GeeksforGeeks</h2>
+    <h4> Flexbox</h4>
+    <div class="flex-container">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+</body>
+ 
+</html>
+```
+Output :
 
+![](https://media.geeksforgeeks.org/wp-content/uploads/20211028155834/1.png)
+We can use many properties of flexbox for flex direction .
 ## 9. Common header meta tags
 The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
 
