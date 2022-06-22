@@ -73,6 +73,55 @@ Example
 }
 ```
 ## 8. Flexbox/Grid
+### Grid Layout
+The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.A grid layout consists of a parent element, with one or more child elements.An HTML element becomes a grid container when its display property is set to grid or inline-grid.All direct children of the grid container automatically become grid items.The horizontal lines of grid items are called rows.The gap property is a shorthand property for the row-gap and the column-gap properties.The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.
+Example:
+```HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;<!--making 4 columnd in the grid -->
+  gap: 10px; <!-- Giving gap between rows and columns-->
+  background-color: #2196F3; <!-- Giving background color to the grid -->
+  padding: 10px; <!-- giving padding to the grid -->
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8); <!--  giving background color to each cell-->
+  text-align: center; <!-- making taxt centerd inside the cell-->
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>The grid-template-columns Property</h1>
+
+<p>You can use the <em>grid-template-columns</em> property to specify the number of columns in your grid layout.</p>
+
+<div class="grid-container">
+  <div>A</div> <!-- making child grid-->
+  <div>B</div>
+  <div>C</div>  
+  <div>D</div>
+  <div>E</div>
+  <div>F</div>  
+  <div>G</div>
+  <div>H</div>
+</div>
+
+</body>
+</html>
+```
+Output will be displayed like this
+![](https://media.geeksforgeeks.org/wp-content/uploads/gridtemplate1.png)
+
+
 ## 9. Common header meta tags
 The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
 
@@ -119,12 +168,10 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
   <link rel="stylesheet" href="my-css-file.css">
  <script src="my-js-file.js" defer></script>
   ```
-
-
-
-
 ## 10. Conclusion
   The CSS is an important part of every website that is developed or devolopment is going on. Thus, a web page you see in a browser is a combination of the document’s data sources, with the CSS formatting rules applied. In the other tutorials in this section you will learn more about CSS, why it is important, and how to use it effectively.
-## 10. References
+## 11. References
+  
 1. https://www.w3schools.com/css/default.asp
 2. https://developer.mozilla.org/en-US/docs/Web/CSS#cookbook
+3. https://www.geeksforgeeks.org/css-grid-property/
