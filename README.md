@@ -20,9 +20,41 @@ A block-level element always starts on a new line, and the browsers automaticall
 There are basically five types of positioning in css.__Static__ HTML elements are positioned static by default. Static positioned elements are not affected by the top, bottom, left, and right properties. __Relative__ An element with position: relative; is positioned relative to its normal position. Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element. __Fixed__ An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. A fixed element does not leave a gap in the page where it would normally have been located. __Absolute__ An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling. Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
 __Sticky__ An element with position: sticky; is positioned based on the user's scroll position.A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
 
-## 5. Common CSS structural and styling classes
+## 5. Common CSS structural classes
+Structural pseudo classes allow access to the child elements present within the hierarchy of parent elements. We can select first-child element, last-child element, alternate elements present within the hierarchy of parent elements.
+### 5.1  :first-child
+first-child represents the element that is prior to its siblings in a tree structure.
+
+Example
+```
+<style>
+table tr:first-child{
+ background-color:gray;
+}
+</style>
+```
+### 5.2. :nth-child(n)
+nth-child(Expression) class applies CSS properties to those elements that appear at the position evaluated by the resultant of an expression. The expression evaluates to a value resulting in the position of the element in a tree structure.
+Example:
+```
+<style>
+table tr:nth-child(2n+1){
+ background-color:gray;
+}
+</style
+```
+We can use many different type to select the structural classes such as:
+Example:
+```html
+<style>
+ul li:last-child{ <!- selects element that is at the end of its siblings in a tree structure.-->
+ background-color:lightblue;
+}
+</style>
+```
+## 6. Common CSS syling classes
 In general to style a website we use two type of CSS files. First one is for define the structure of the websute and second one is for style the website. In these files we have some elements who have common style for these types of element we make a common class so that we can style all the element by writing code of one class. By using common class we can reduce a lot of work in styling.
-## 6. CSS Specificity
+## 7. CSS Specificity
 If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element.Every CSS selector has its place in the specificity hierarchy.There are four categories which define the specificity level of a selector:Inline styles, IDs, Classe, pseudo-classes, attribute selectors elements and pseudo-elements.There are some points to remember in css specificity. Here I am talking a example with numbers.
 * universal selector has zero spacificity.
 * Classes selector has 10 specificity value.
@@ -30,7 +62,7 @@ If there are two or more CSS rules that point to the same element, the selector 
 * Inline selector has spacificity value 1000.
 * if we combine more than one selector then we have to add specificity value of all the items then which has highest value has highest spacificity. 
 
-## 7. CSS Responsive Queries
+## 8. CSS Responsive Queries
 The @media rule is used in media queries to apply different styles for different media types/devices.Media queries can be used to check many things, such as:
 
 * width and height of the viewport
@@ -72,8 +104,8 @@ Example
   }
 }
 ```
-## 8. Flexbox/Grid
-### 8.2 Grid Layout
+## 9. Flexbox/Grid
+### 9.1 Grid Layout
 The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.A grid layout consists of a parent element, with one or more child elements.An HTML element becomes a grid container when its display property is set to grid or inline-grid.All direct children of the grid container automatically become grid items.The horizontal lines of grid items are called rows.The gap property is a shorthand property for the row-gap and the column-gap properties.The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.
 Example:
 ```HTML
@@ -121,7 +153,7 @@ Example:
 Output will be displayed like this
 ![](https://media.geeksforgeeks.org/wp-content/uploads/gridtemplate1.png)
 
-### 8.2 Flex box
+### 9.2 Flex box
 The flexbox or flexible box model in CSS is a one-dimensional layout model that has flexible and efficient layouts with distributed spaces among items to control their alignment structure ie., it is a layout model that provides an easy and clean way to arrange items within a container. Flexbox can be useful for creating small-scales layouts & is responsive and mobile-friendly.
 ##### Features of flexbox:
 * A lot of flexibility is given.
@@ -160,17 +192,19 @@ Example
 </body>
  
 </html>
+
 ```
-Output :
+Output:
 
 ![](https://media.geeksforgeeks.org/wp-content/uploads/20211028155834/1.png)
+
 We can use many properties of flexbox for flex direction .
-## 9. Common header meta tags
+## 10. Common header meta tags
 The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
 
 <meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.Metadata will not be displayed on the page, but is machine parsable. Some important attributes of the metatag is given bellow:
   
-  ### 9.1 meta tag
+  ### 10.1 meta tag
    It gives the information about the meta data. Here is the example of meta tag
   ```
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -178,7 +212,7 @@ The <meta> tag defines metadata about an HTML document. Metadata is data (inform
  The viewport is the user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen.The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
 
 The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
-  ### 9.2 title tag
+  ### 10.2 title tag
   The <title> element defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.
   The <title> element:
 
@@ -190,7 +224,7 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
   <title>My first project</title>
   ```
   This will give the 
-  ### 9.3 Open Graph Data 
+  ### 10.3 Open Graph Data 
   It is a metadata protocol that Facebook invented to provide richer metadata for websites. 
   ```
   <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
@@ -199,22 +233,23 @@ information about Open Web technologies including HTML, CSS, and APIs for both W
 and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 <meta property="og:title" content="Mozilla Developer Network">
   ```
-  ### 9.4  Twitter Cards
+  ### 10.4  Twitter Cards
   Twitter also has its own similar proprietary metadata called Twitter Cards, which has a similar effect when the site's URL is displayed on twitter.com.
   ```
   <meta name="twitter:title" content="Mozilla Developer Network">
   ```
-  ### 9.5 Different Styling tags 
+  ### 10.5 Different Styling tags 
   In HTML we use diffrent type of styling tags to style html such as link tag to link css and favicon and script tag to link  java script.
   ```
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="my-css-file.css">
  <script src="my-js-file.js" defer></script>
   ```
-## 10. Conclusion
+## 11. Conclusion
   The CSS is an important part of every website that is developed or devolopment is going on. Thus, a web page you see in a browser is a combination of the document’s data sources, with the CSS formatting rules applied. In the other tutorials in this section you will learn more about CSS, why it is important, and how to use it effectively.
-## 11. References
+## 12. References
   
 1. https://www.w3schools.com/css/default.asp
 2. https://developer.mozilla.org/en-US/docs/Web/CSS#cookbook
 3. https://www.geeksforgeeks.org/css-grid-property/
+  https://www.web4college.com/css/web4-css-structural-classes.php
